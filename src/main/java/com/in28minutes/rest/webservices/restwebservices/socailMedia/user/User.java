@@ -1,7 +1,7 @@
 package com.in28minutes.rest.webservices.restwebservices.socailMedia.user;
 
 import java.time.LocalDate;
-
+// A user to Store all the user information
 public class User {
 	private Integer id;
 	private String username;

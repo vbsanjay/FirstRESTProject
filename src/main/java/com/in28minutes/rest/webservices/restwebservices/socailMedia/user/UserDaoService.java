@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 import org.springframework.stereotype.Component;
+//This is a service class. DAO = Data Access Object
 
 @Component
 public class UserDaoService {
@@ -34,5 +35,10 @@ public class UserDaoService {
 		user.setId(++userNumber);
 		users.add(user);
 		return user;
+	}
+	
+	public void deleteById(int id) {
+		Predicate<? super User> predicate = user -> user.getId().equals(id);
+		users.removeIf(predicate);
 	}
 }
